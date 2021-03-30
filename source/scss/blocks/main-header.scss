@@ -1,0 +1,47 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  &--fixed-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparentize($background-white, 0.1);
+    animation-name: show-header;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes show-header {
+    0% {
+      top: -96px;
+      opacity: 0;
+    }
+
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  &--fixed-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: hide-header;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes hide-header {
+    0% {
+      top: 0;
+      opacity: 1;
+    }
+
+    100% {
+      top: -96px;
+      opacity: 0;
+    }
+  }
+}

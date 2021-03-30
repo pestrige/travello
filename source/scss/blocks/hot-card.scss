@@ -1,0 +1,88 @@
+.hot-card {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.hot-card__link {
+  width: 330px;
+  height: 327px;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black); /* stylelint-disable-line property-no-vendor-prefix */
+
+  @media (max-width: 479px) {
+    width: 270px;
+    height: auto;
+  }
+
+  &:hover .hot-card__img {
+    transform: scale(1.1);
+  }
+}
+
+.hot-card__img {
+  transition: transform 0.3s;
+
+  @media (max-width: 479px) {
+    width: 270px;
+    height: 100%;
+  }
+}
+
+.hot-card__text-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto auto;
+  padding: 30px 70px 0 30px;
+
+  @media (max-width: 479px) {
+    padding: 20px;
+  }
+}
+
+.hot-card__timer {
+  margin-top: 0;
+  margin-bottom: 23px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hot-card__timer-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 22px;
+  background-image: url("../img/icons/icon-clock.svg");
+}
+
+.hot-card__remain {
+  margin-right: 5px;
+}
+
+.hot-card__lid {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: $font-semi;
+  font-size: 24px;
+  line-height: 34px;
+  color: $text-600-color;
+}
+
+.hot-card__otions {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.hot-card__price {
+  align-self: end;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-semi;
+  font-size: 36px;
+  line-height: 46px;
+  color: $basic-color;
+}

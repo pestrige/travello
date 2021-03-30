@@ -1,0 +1,38 @@
+.hot-deals__header {
+  margin-bottom: 60px;
+}
+
+.hot-deals__title {
+  margin: 0;
+}
+
+.hot-deals__subtitle {
+  margin: 0 0 20px;
+  color: $text-600-color;
+}
+
+.hot-deals__slider {
+  padding-left: var(--padding);
+}
+
+.hot-deals__slider-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+}
+
+.hot-deals__slider-item {
+  width: 330px;
+  height: auto;
+
+  @media (max-width: 479px) {
+    width: 270px;
+  }
+}
+
+.hot-deals__slider-item:not(:last-child) {
+  margin-right: 30px;
+}

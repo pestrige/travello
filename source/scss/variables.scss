@@ -1,0 +1,52 @@
+/* Fonst */
+$font-regular: "Lato Regular", "Verdana", sans-serif;
+$font-semi: "Lato Semibold", "Verdana", sans-serif;
+$font-bold: "Lato Bold", "Verdana", sans-serif;
+$font-black: "Lato Black", "Verdana", sans-serif;
+
+/* Colors */
+$basic-300-color: #4fe5b1;
+$basic-color: #009d98;
+$basic-600-color: #188182;
+
+$accent-color: #ffc107;
+
+$text-color: #7a7a7a;
+$text-600-color: #130f40;
+$contrast-text-color: #ffffff;
+
+$border-color: #e3e3e3;
+$decor-color: #84aabb;
+$background-color: #e6f6fa;
+$background-white: #ffffff;
+$background-fade-color: rgba(0, 168, 204, 0.05);
+
+$button-shadow: 0 10px 20px rgba(0, 157, 152, 0.3);
+
+:root {
+  --padding: 195px;
+
+  @media (max-width: 1279px) {
+    --padding: 80px;
+  }
+
+  @media (max-width: 639px) {
+    --padding: 50px;
+  }
+
+  @media (max-width: 480px) {
+    --padding: 30px;
+  }
+
+  --text-size: 16px;
+  --text-lh: 26px;
+  --title-size: 40px;
+  --title-lh: 50px;
+
+  @media (max-width: 799px) {
+    --text-size: 14px;
+    --text-lh: 22px;
+    --title-size: 32px;
+    --title-lh: 44px;
+  }
+}

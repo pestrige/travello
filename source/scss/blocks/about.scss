@@ -1,0 +1,123 @@
+.about {
+  background-color: $background-color;
+}
+
+.about__inner {
+  position: relative;
+  display: grid;
+  grid-template-areas: "img text";
+  align-items: center;
+
+  @media (max-width: 959px) {
+    padding-right: var(--padding);
+    grid-template-areas:
+      "img"
+      "text";
+    justify-content: center;
+    row-gap: 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 274px;
+    height: 274px;
+    top: 150px;
+    left: 60px;
+    background-image: url("../img/about-decor-cycles.svg");
+    background-repeat: no-repeat;
+
+    @media (max-width: 479px) {
+      left: 20px;
+      top: 100px;
+    }
+  }
+}
+
+.about__image-block {
+  position: relative;
+  grid-area: img;
+
+  @media (max-width: 959px) {
+    margin: 0 auto;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    width: 50px;
+    height: 50px;
+    left: -30px;
+    top: -30px;
+    background-image: url("../img/decor-bg.svg");
+  }
+
+  &::after {
+    width: 86px;
+    height: 86px;
+    top: 500px;
+    right: -40px;
+    border-radius: 10px;
+    background-color: $accent-color;
+
+    @media (max-width: 639px) {
+      right: -20px;
+    }
+
+    @media (max-width: 479px) {
+      top: 310px;
+    }
+  }
+}
+
+.about__image {
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.about__text-block {
+  padding: 0 280px 0 110px;
+  grid-area: text;
+  background-image: url("../img/about-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (max-width: 1365px) {
+    padding-right: 150px;
+  }
+
+  @media (max-width: 1279px) {
+    padding-left: 80px;
+    padding-right: var(--padding);
+  }
+
+  @media (max-width: 799px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: $font-black;
+  font-size: var(--title-size);
+  line-height: var(--title-lh);
+  color: $basic-color;
+
+  @media (max-width: 959px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.about__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+}

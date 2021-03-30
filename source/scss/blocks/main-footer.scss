@@ -1,0 +1,150 @@
+.main-footer__decor {
+  width: 100%;
+  padding-top: 40%;
+  background-image: url("../img/footer-crop-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+}
+
+.main-footer__info {
+  margin-top: -1px;
+  background-image: linear-gradient(180deg, #066251 0%, $basic-color 100%);
+}
+
+.main-footer__inner {
+  padding-bottom: 30px;
+  display: grid;
+  align-content: end;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "contacts support policy"
+    "copyright copyright copyright";
+  row-gap: 50px;
+  color: $contrast-text-color;
+
+  @media (max-width: 799px) {
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "contacts support"
+    "policy policy"
+    "copyright copyright";
+  }
+
+  @media (max-width: 419px) {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "contacts"
+    "support"
+    "policy"
+    "copyright";
+  }
+}
+
+.main-footer__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: $font-semi;
+  font-size: 24px;
+  line-height: 34px;
+
+  @media (max-width: 799px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 419px) {
+    margin-bottom: 15px;
+  }
+}
+
+/* Contacts Footer Block */
+
+.main-footer__contacts {
+  grid-area: contacts;
+}
+
+.main-footer__contacts-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.main-footer__contacts-item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @media (max-width: 419px) {
+    margin-bottom: 7px;
+  }
+}
+
+.main-footer__contacts-item:last-child {
+  margin-top: 15px;
+}
+
+.main-footer__socials-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.main-footer__socials-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Support Footer Block */
+
+.main-footer__support {
+  grid-area: support;
+}
+
+.main-footer__support-links {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.main-footer__support-item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @media (max-width: 419px) {
+    margin-bottom: 7px;
+  }
+}
+
+/* Policy Footer Block */
+
+.main-footer__policy {
+  grid-area: policy;
+
+  @media (max-width: 799px) {
+    text-align: center;
+  }
+}
+
+.main-footer__policy-text {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Copyright Footer Block */
+
+.main-footer__copyright {
+  width: 100%;
+  grid-area: copyright;
+  justify-self: center;
+  border-top: 1px solid $contrast-text-color;
+}
+
+.main-footer__copyright-text {
+  margin-top: 30px;
+  text-align: center;
+}

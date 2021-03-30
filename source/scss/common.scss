@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hover-underline {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s;
+
+  &:hover {
+    border-color: $contrast-text-color;
+  }
+}
+
+.underline {
+  border-bottom: 1px solid $contrast-text-color;
+  transition: border-color 0.4s;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.body {
+  position: relative;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: $font-regular;
+  font-weight: normal;
+  font-size: var(--text-size);
+  line-height: var(--text-lh);
+  color: $text-color;
+  background-color: $background-white;
+
+  @media (max-width: 799px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+
+  &--no-right {
+    padding-right: 0;
+  }
+}
+
+.section-title {
+  font-family: $font-bold;
+  font-size: var(--title-size);
+  line-height: var(--title-lh);
+  color: $text-600-color;
+
+  @media (max-width: 799px) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.button {
+  padding: 12px 20px;
+  font-family: $font-semi;
+  font-weight: normal;
+  font-size: var(--text-size);
+  line-height: var(--text-lh);
+  color: $contrast-text-color;
+  border: none;
+  background-color: $basic-color;
+  box-shadow: $button-shadow;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.slider-controls {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    padding-left: 0;
+  }
+}
+
+.slider-control {
+  position: relative;
+  padding: 0;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background-color: $basic-color;
+  box-shadow: $button-shadow;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    width: 8px;
+    height: 16px;
+    background-image: url("../img/icons/icon-arrow.svg");
+  }
+
+  &--next {
+    margin-left: 25px;
+
+    &::after {
+      top: 16px;
+      left: 20px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 959px) {
+    flex-wrap: wrap;
+  }
+
+  .section-header__text-block {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (max-width: 959px) {
+      margin-bottom: 30px;
+      flex-basis: 100%;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

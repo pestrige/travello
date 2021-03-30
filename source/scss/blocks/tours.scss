@@ -1,0 +1,68 @@
+.tours {
+  padding-bottom: 100px;
+  background-color: $background-white;
+  background-image:
+    url("../img/slider-bg-clouds.svg"),
+    linear-gradient(180deg, $background-color 0%, $background-fade-color 100%);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.tours__header {
+  padding-top: 150px;
+  margin-bottom: 60px;
+}
+
+.tours__title {
+  margin: 0;
+}
+
+.tours__subtitle {
+  margin: 0 0 20px;
+  color: $text-600-color;
+}
+
+.tours__slider {
+  padding-left: var(--padding);
+
+  @media (min-width: 1441px) {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 90px;
+  }
+}
+
+.tours__slider-list {
+  margin-top: 0;
+  margin-bottom: 100px;
+  padding-left: 0;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  list-style: none;
+
+  @media (max-width: 479px) {
+    margin-bottom: 30px;
+  }
+}
+
+.tours__slider-item {
+  width: 420px;
+  height: auto;
+
+  @media (max-width: 479px) {
+    width: 100%;
+  }
+}
+
+.tours__slider-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.tours__slider-item:last-child {
+  margin-right: var(--padding);
+
+  @media (max-width: 479px) {
+    margin-right: 0;
+  }
+}

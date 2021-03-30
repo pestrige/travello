@@ -1,0 +1,56 @@
+.main-content__search {
+  padding-right: calc(((100% - 1440px) / 2) + 50px);
+  padding-bottom: 115px;
+  display: flex;
+  justify-content: end;
+  background-color: $background-color;
+
+  @media (max-width: 1440px) {
+    padding-right: 50px;
+  }
+
+  @media (max-width: 959px) {
+    padding-right: 0;
+  }
+}
+
+.main-content__search-inner {
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+
+  @media (max-width: 959px) {
+    margin-right: auto;
+  }
+
+  @media (max-width: 639px) {
+    width: 100%;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  @media (max-width: 419px) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -33px;
+    bottom: -33px;
+    width: 110px;
+    height: 110px;
+    background-image: url("../img/decor-bg.svg");
+  }
+}
+
+.main-content__tours {
+  margin-top: -30px;
+  margin-bottom: 150px;
+  padding-top: 30px;
+}
+
+.main-content__hot-deals {
+  margin-bottom: 100px;
+}
