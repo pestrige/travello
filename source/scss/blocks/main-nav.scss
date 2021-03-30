@@ -152,7 +152,8 @@
     right: 30px;
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     width: 40px;
